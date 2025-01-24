@@ -1,0 +1,11 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+.env
+*.log
+
+test-results/
+broken-resources.json
+lighthouse-report.json
+api_validation_log.txt
