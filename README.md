@@ -26,9 +26,19 @@ npx playwright install
 - Comprehensive reporting
 
 ### Execution
-```bash
-npx playwright test
-```
+#### Run Specific Test:
+  - For Lighthouse analysis:
+    ```bash
+    npm run test:lighthouse
+    ```
+  - For resource validation:
+    ```bash
+    npm run test:resources
+    ```
+#### Run All Tests:
+  ```bash
+  npm run test:all
+  ```
 
 ### Validation Metrics
 - Performance score
@@ -36,6 +46,9 @@ npx playwright test
 - Accessibility score
 - Best practices evaluation
 - Broken resource detection
+
+### Improvment
+- Create a report directory and store json report files there.
 
 ## Part 2: API Data Validation
 
@@ -69,4 +82,14 @@ python3 api_validation.py
 
 ### Logging 
 Results are logged to api_validation_log.txt
+
+### Improvments
+1. #### Logger in a Separate File
+   - Move the logger configuration to a separate module (logger.py) for better modularity.
+2. #### Logs Directory
+   - Create a logs directory and store log files there.
+3. #### Separate File for API Methods
+   - Extract the API-related methods (fetch_posts) into a separate file (api_methods.py).
+4. #### Run test Separately
+   - Add test functionality using a testing framework like pytest to validate the API responses and post validation logic.
 
