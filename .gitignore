@@ -9,3 +9,4 @@ test-results/
 broken-resources.json
 lighthouse-report.json
 api_validation_log.txt
+venv

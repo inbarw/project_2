@@ -7,10 +7,11 @@
   },
   "name": "task_1",
   "version": "1.0.0",
-  "main": "website_analysis.js",
   "type": "module",
   "scripts": {
-    "test": "playwright test website_analysis.js"
+    "test:lighthouse": "playwright test tests/lighthouse_test.js",
+    "test:resources": "playwright test tests/resource_validation_test.js",
+    "test:all": "playwright test"
   },
   "keywords": [],
   "author": "",
