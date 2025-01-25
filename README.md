@@ -47,6 +47,29 @@ npx playwright install
 - Best practices evaluation
 - Broken resource detection
 
+### Common Issues
+- **DOM Resolution Errors**
+  - Pages with dynamic or complex content might not stabilize, causing analysis to fail.
+  - Ensure the page is fully loaded before running Lighthouse (e.g., use await page.waitForLoadState('networkidle');).
+  - Verify network connectivity to ensure external resources are accessible.
+    
+- **Trace Processing Errors**
+  - Some pages with large resources or heavy JavaScript may cause Lighthouse to fail during trace analysis.
+  - Reduce the complexity of the page if possible or split the analysis into smaller sections.
+
+- **Timeouts**:
+  - Large or slow-loading pages may require increased timeout settings to complete the analysis.
+
+### Known Limitations
+- **Complex JavaScript**
+  - Websites with intricate JavaScript interactions can lead to partial or failed Lighthouse results.
+  - Simplify scripts or optimize code for better compatibility.
+ 
+- **Large Pages**
+  - Pages with numerous images or resources may cause incomplete data gathering or slower processing.
+  - Consider optimizing image sizes and minimizing unnecessary resources.
+    
+
 ### Improvment
 - Create a report directory and store json report files there.
 
