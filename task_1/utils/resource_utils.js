@@ -19,7 +19,7 @@ export async function validateResources(url) {
   for (const resource of resources) {
     try {
       const response = await page.request.get(resource);
-      if (!response.ok()) {
+       if (response.status() !== 200) {
         brokenResources.push({
           url: resource,
           status: response.status(),
